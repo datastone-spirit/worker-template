@@ -16,27 +16,27 @@ def concurrency_modifier(current_concurrency: int) -> int:
 
 
 async def async_handler(request: Dict[str, Any], env: Env):
-    output = f"hello world! {input}"
+    output = f"hello world! {request}"
     await asyncio.sleep(0.1)
     return bytes(output, "utf-8")
 
 
 async def async_gen_handler(request: Dict[str, Any], env: Env):
-    output = f"hello world! {input}"
+    output = f"hello world! {request}"
     for i in range(10):
         await asyncio.sleep(0.01)
         yield f"{output} - {i}\n"
 
 
 def gen_handler(request: Dict[str, Any], env: Env):
-    output = f"hello world! {input}"
+    output = f"hello world! {request}"
     for i in range(10):
         sleep(0.01)
         yield f"{output} - {i}\n"
 
 
 def handler(request: Dict[str, Any], env: Env):
-    output = f"hello world! {input}"
+    output = f"hello world! {request}"
     sleep(0.1)
     return bytes(output, "utf-8")
 
