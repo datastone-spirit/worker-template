@@ -17,4 +17,4 @@ WORKDIR /usr/src/app
 # Load models to image
 RUN python3.11 src/build.py
 
-CMD ["python3.11", "-u", "src/main.py"]
+CMD [/usr/src/app/start.sh]
