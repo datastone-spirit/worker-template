@@ -1,5 +1,5 @@
 #!/bin/bash
 
-python src/server.py &
+/root/models/FastChat/start_fastchat.sh &
 
 python -u src/main.py
