@@ -1,1 +1,1 @@
-sprite-gpu>=0.0.5
+sprite-gpu>=0.0.6
