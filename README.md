@@ -1,3 +1,3 @@
 # Worker Template
 
-Worker template of Datastone Sprite Serverless.
+Worker template of Datastone Spirit Serverless.

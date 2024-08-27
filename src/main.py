@@ -2,8 +2,8 @@ import asyncio
 from time import sleep
 from typing import Any, Dict
 
-from sprite_gpu import start
-from sprite_gpu.env import Env
+from spirit_gpu import start
+from spirit_gpu.env import Env
 
 
 def concurrency_modifier(current_concurrency: int) -> int:
