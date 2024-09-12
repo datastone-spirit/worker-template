@@ -1,1 +1,1 @@
-spirit-gpu>=0.0.1
+spirit-gpu>=0.0.2

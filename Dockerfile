@@ -15,6 +15,8 @@ COPY . /usr/src/app
 WORKDIR /usr/src/app
 
 # Load models to image
-RUN python3.11 src/build.py
+RUN chmod +x scripts/build.sh
+RUN ./scripts/build.sh
 
-CMD ["python3.11", "-u", "src/main.py"]
+RUN chmod +x scripts/start.sh
+CMD ["./scripts/start.sh"]
