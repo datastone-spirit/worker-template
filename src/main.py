@@ -2,7 +2,7 @@ import asyncio
 from time import sleep
 from typing import Any, Dict
 
-from spirit_gpu import start
+from spirit_gpu import start, logger
 from spirit_gpu.env import Env
 
 
@@ -36,6 +36,10 @@ def gen_handler(request: Dict[str, Any], env: Env):
 
 
 def handler(request: Dict[str, Any], env: Env):
+    # please use latest version of spirit_gpu, we will only add request["meta"]["requestID"] if it not exist in your request.
+    request_id = request["meta"]["requestID"]
+    logger.info("start to handle", request_id=request_id, caller=True)
+
     output = f"hello world! {request}"
     sleep(0.1)
     return bytes(output, "utf-8")
